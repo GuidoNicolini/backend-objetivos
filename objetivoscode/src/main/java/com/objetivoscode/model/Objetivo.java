@@ -41,7 +41,7 @@ public class Objetivo {
 	private String descripcion;
 	private Boolean isCumplido;
 	
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "nota")
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "objetivo")
 	private List<Nota> notas;
 	
 	@Column(name = "is_deleted")

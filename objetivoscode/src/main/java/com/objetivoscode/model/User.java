@@ -9,6 +9,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -47,7 +49,7 @@ public class User {
 	private String Nombre;
 	private String Apellido;
 	
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "usuario")
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "user")
 	private List<Objetivo> objetivos;
 	
 	@Column(name = "is_deleted")
